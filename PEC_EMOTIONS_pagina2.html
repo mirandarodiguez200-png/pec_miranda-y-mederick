@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 2</title>
+</head>
+
+
+ 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Las Emociones</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            animation: fondo 10s infinite alternate;
+        }
+
+        /* CAMBIO DE COLOR DEL FONDO */
+        @keyframes fondo {
+
+            0% {
+                background-color: #ffd6e0;
+            }
+
+            25% {
+                background-color: #d6f5ff;
+            }
+
+            50% {
+                background-color: #fff2b2;
+            }
+
+            75% {
+                background-color: #e5d6ff;
+            }
+
+            100% {
+                background-color: #d6ffd6;
+            }
+
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            padding: 50px;
+            text-align: center;
+            color: white;
+            animation: colores 8s infinite;
+        }
+
+        @keyframes colores {
+
+            0% {
+                background-color: #ff4d6d;
+            }
+
+            25% {
+                background-color: #6c5ce7;
+            }
+
+            50% {
+                background-color: #00b894;
+            }
+
+            75% {
+                background-color: #0984e3;
+            }
+
+            100% {
+                background-color: #e84393;
+            }
+
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* MENU */
+
+        nav {
+            background-color: #222;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00cec9;
+        }
+
+        /* CONTENEDOR */
+
+        .contenedor {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        /* INTRODUCCION */
+
+        .intro {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px #777;
+        }
+
+        .intro h2 {
+            color: #6c5ce7;
+            font-size: 30px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* TITULO */
+
+        .titulo {
+            text-align: center;
+            font-size: 35px;
+            color: #333;
+        }
+
+        /* TARJETAS */
+
+        .emociones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px #777;
+
+            animation: borde 6s infinite;
+            transition: 0.4s;
+        }
+
+        .tarjeta:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes borde {
+
+            0% {
+                border: 5px solid #ff4d6d;
+            }
+
+            25% {
+                border: 5px solid #6c5ce7;
+            }
+
+            50% {
+                border: 5px solid #00b894;
+            }
+
+            75% {
+                border: 5px solid #0984e3;
+            }
+
+            100% {
+                border: 5px solid #e84393;
+            }
+
+        }
+
+        .emoji {
+            font-size: 65px;
+        }
+
+        .tarjeta h3 {
+            font-size: 28px;
+        }
+
+        .tarjeta p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* COLORES DE LAS EMOCIONES */
+
+        .alegria h3 {
+            color: #f1c40f;
+        }
+
+        .tristeza h3 {
+            color: #3498db;
+        }
+
+        .enojo h3 {
+            color: #e74c3c;
+        }
+
+        .miedo h3 {
+            color: #8e44ad;
+        }
+
+        .sorpresa h3 {
+            color: #e67e22;
+        }
+
+        .calma h3 {
+            color: #27ae60;
+        }
+
+        /* IMPORTANCIA */
+
+        .importancia {
+            margin-top: 40px;
+            padding: 35px;
+            border-radius: 20px;
+            color: white;
+
+            animation: importancia 8s infinite;
+        }
+
+        @keyframes importancia {
+
+            0% {
+                background-color: #6c5ce7;
+            }
+
+            25% {
+                background-color: #e84393;
+            }
+
+            50% {
+                background-color: #00b894;
+            }
+
+            75% {
+                background-color: #0984e3;
+            }
+
+            100% {
+                background-color: #6c5ce7;
+            }
+
+        }
+
+        .importancia h2 {
+            font-size: 30px;
+        }
+
+        .importancia li {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        /* PIE DE PAGINA */
+
+        footer {
+            margin-top: 40px;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            animation: footer 7s infinite;
+        }
+
+        @keyframes footer {
+
+            0% {
+                background-color: #ff4d6d;
+            }
+
+            50% {
+                background-color: #6c5ce7;
+            }
+
+            100% {
+                background-color: #00b894;
+            }
+
+        }
+
+        /* PARA CELULAR */
+
+        @media (max-width: 800px) {
+
+            .emociones {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> LAS EMOCIONES </h1>
+
+       
+
+    </header>
+
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#emociones">Emociones</a>
+
+        <a href="#importancia">Importancia</a>
+
+    </nav>
+
+
+    <div class="contenedor">
+
+        <section class="intro" id="inicio">
+
+            <h2>¿Qué son las emociones?</h2>
+
+            <p>
+                Las emociones son respuestas que sentimos ante diferentes
+                situaciones, personas o acontecimientos.
+            </p>
+
+            <p>
+                Nos ayudan a comprender lo que sentimos, comunicarnos
+                con otras personas y reaccionar ante diferentes situaciones.
+            </p>
+
+        </section>
+
+
+        <h2 class="titulo" id="emociones">
+            PRINCIPALES EMOCIONES 
+        </h2>
+
+
+        <div class="emociones">
+
+
+            <div class="tarjeta alegria">
+
+                <div class="emoji">😀</div>
+
+                <h3>Alegría</h3>
+
+                <p>
+                    Es una emoción relacionada con momentos agradables,
+                    divertidos y satisfactorios.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta tristeza">
+
+                <div class="emoji">😢</div>
+
+                <h3>Tristeza</h3>
+
+                <p>
+                    Puede aparecer cuando vivimos una pérdida,
+                    decepción o momento difícil.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta enojo">
+
+                <div class="emoji">😡</div>
+
+                <h3>Enojo</h3>
+
+                <p>
+                    Aparece cuando algo nos molesta, nos frustra
+                    o consideramos que es injusto.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta miedo">
+
+                <div class="emoji">😨</div>
+
+                <h3>Miedo</h3>
+
+                <p>
+                    Nos ayuda a reconocer situaciones que pueden
+                    representar algún peligro.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta sorpresa">
+
+                <div class="emoji">😲</div>
+
+                <h3>Sorpresa</h3>
+
+                <p>
+                    Aparece cuando ocurre algo inesperado
+                    o diferente a lo que imaginábamos.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta calma">
+
+                <div class="emoji">😌</div>
+
+                <h3>Calma</h3>
+
+                <p>
+                    Es una sensación de tranquilidad, relajación
+                    y equilibrio.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <section class="importancia" id="importancia">
+
+            <h2> ¿Por qué son importantes las emociones?</h2>
+
+            <p>
+                Las emociones son importantes porque nos ayudan a
+                entender lo que sentimos y a relacionarnos con otras personas.
+            </p>
+
+            <ul>
+
+                <li>Nos ayudan a expresar nuestros sentimientos.</li>
+
+                <li>Nos permiten reconocer nuestras necesidades.</li>
+
+                <li>Ayudan a tomar decisiones.</li>
+
+                <li>Nos permiten comunicarnos con otras personas.</li>
+
+                <li>Nos ayudan a enfrentar diferentes situaciones.</li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+<h2> Las emociones </h2>
+
+<img src="emociones.jpg" 
+     alt="Imagen de las emociones"
+     width="350">
+<img src="2.jpg" 
+     alt="Imagen de las emociones"
+     width="350">
+
+    <footer>
+<Nav><P><H1>3-A</H1></P></Nav>
+        <p> Página sobre las emociones </p>
+
+        <p>DANIEL VEGA😲
+             MIRANDA RAPIO</p>
+
+    </footer>
+
+</body>
+</html>

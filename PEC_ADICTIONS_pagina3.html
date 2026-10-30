@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 3</title>
+</head>
+<body>
+
+   
+
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Problemas, Emociones y Adicciones</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #252525;
+            background: linear-gradient(135deg, #e0f7fa, #fce4ec, #ede7f6);
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            min-height: 600px;
+            padding: 80px 30px;
+            color: white;
+            text-align: center;
+ background:
+                linear-gradient(
+                    rgba(50, 30, 100, 0.75),
+                    rgba(0, 120, 160, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            animation: aparecer 1.5s ease;
+        }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        header h1 {
+            font-size: 58px;
+            max-width: 1000px;
+            margin: 10px;
+            text-shadow: 3px 3px 10px #000;
+        }
+
+        header p {
+            font-size: 24px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 16px 30px;
+            background: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #00c9a7;
+            transform: scale(1.1);
+        }
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: linear-gradient(
+                90deg,
+                #6a1b9a,
+                #1565c0,
+                #00897b
+            );
+
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ffe082;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #512da8;
+        }
+
+        .subtitulo {
+            text-align: center;
+            font-size: 19px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        /* =========================
+           INTRODUCCION
+        ========================= */
+
+        .intro {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 50px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            border-left: 10px solid #ff4081;
+        }
+
+        .intro h2 {
+            color: #6a1b9a;
+            font-size: 32px;
+        }
+
+        .intro p {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           TARJETAS
+        ========================= */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+            transition: 0.4s;
+
+            border-top: 7px solid #7e57c2;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .icono {
+            font-size: 60px;
+        }
+
+        .tarjeta h3 {
+            font-size: 25px;
+            color: #512da8;
+        }
+
+        .tarjeta p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* =========================
+           SECCION IMAGEN
+        ========================= */
+
+        .imagen-seccion {
+            margin-top: 60px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            align-items: center;
+        }
+
+        .imagen-seccion img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 25px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .texto-imagen {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .texto-imagen h2 {
+            color: #e91e63;
+        }
+
+        .texto-imagen p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* ============
+           PROCESO
+        ========================= */
+
+        .proceso {
+            margin-top: 60px;
+            padding: 50px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #7b1fa2,
+                #1976d2,
+                #009688
+            );
+
+            border-radius: 30px;
+            color: white;
+        }
+
+        .proceso h2 {
+            text-align: center;
+            font-size: 38px;
+        }
+
+        .pasos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .paso {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .numero {
+            width: 60px;
+            height: 60px;
+
+            margin: auto;
+
+            background: #ffca28;
+            color: #333;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+
+
+
+        Claro. Aquí tienes una versión **muy corta**, con tonos morados y sobre **emociones**, lista para pegar en VS Code.
+
+
+        /* =========================
+           SEÑALES
+        ========================= */
+
+        .alerta {
+            margin-top: 60px;
+            background: #fff3e0;
+            padding: 40px;
+            border-radius: 25px;
+
+            border-left: 10px solid #ff9800;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .alerta h2 {
+            color: #e65100;
+        }
+
+        .alerta li {
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        /* =========================
+           PREVENCION
+        ========================= */
+
+        .prevencion {
+            margin-top: 60px;
+        }
+
+        .prevencion .tarjeta {
+            border-top-color: #00a896;
+        }
+
+        /* =========================
+           VIDEOS
+        ========================= */
+
+        .videos {
+            margin-top: 60px;
+        }
+
+        .video-contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .video {
+            background: white;
+            padding: 20px;
+            border-radius: 25px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .video h3 {
+            color: #6a1b9a;
+        }
+
+        /* =========================
+           MENSAJE FINAL
+        ========================= */
+
+        .mensaje {
+            margin-top: 60px;
+            padding: 60px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ec407a,
+                    #7e57c2,
+                    #29b6f6
+                );
+        }
+
+        .mensaje h2 {
+            font-size: 40px;
+        }
+
+        .mensaje p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+            padding: 35px;
+            text-align: center;
+
+            background: #211b3a;
+            color: white;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            .tarjetas,
+            .pasos,
+            .imagen-seccion,
+            .video-contenedor {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     ENCABEZADO
+========================= -->
+
+<header>
+
+    <h1>
+        💜 PROBLEMAS, EMOCIONES Y ADICCIONES 💙
+    </h1>
+
+    <p>
+        Comprender nuestros problemas y emociones puede ayudarnos
+        a tomar decisiones más saludables y buscar apoyo cuando lo necesitamos.
+    </p>
+
+    <a href="#informacion" class="boton">
+        CONOCER MÁS ↓
+    </a>
+
+</header>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+    <a href="#informacion">Información</a>
+
+    <a href="#causas">Causas</a>
+
+    <a href="#senales">Señales</a>
+
+    <a href="#prevencion">Prevención</a>
+
+    <a href="#videos">Videos</a>
+
+</nav>
+
+
+<div class="contenedor">
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
+
+<section class="intro" id="informacion">
+
+    <h2>🧠 ¿Qué relación tienen los problemas y las adicciones?</h2>
+
+    <p>
+        Las personas pueden atravesar momentos complicados como problemas
+        familiares, dificultades escolares, conflictos con otras personas,
+        pérdidas, estrés o sentimientos de soledad.
+    </p>
+
+    <p>
+        Cuando una persona no encuentra formas saludables de enfrentar
+        estas situaciones, puede ser más vulnerable a desarrollar conductas
+        que afecten su bienestar. Las adicciones son problemas de salud
+        que pueden afectar la vida personal, familiar, escolar y social.
+    </p>
+
+    <p>
+        Tener problemas no significa que una persona necesariamente tendrá
+        una adicción. Existen muchos factores y, sobre todo, existen formas
+        saludables de recibir apoyo y prevenirlas.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CAUSAS
+========================= -->
+
+<section id="causas">
+
+    <h2 class="titulo">
+        🌈 ¿Qué situaciones pueden influir?
+    </h2>
+
+    <p class="subtitulo">
+        Algunos factores pueden aumentar la vulnerabilidad de una persona.
+    </p>
+
+
+    <div class="tarjetas">
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🏠</div>
+
+            <h3>Problemas familiares</h3>
+
+            <p>
+                Los conflictos constantes, dificultades de comunicación
+                o cambios familiares pueden generar estrés emocional.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">📚</div>
+
+            <h3>Problemas escolares</h3>
+
+            <p>
+                La presión académica, dificultades de aprendizaje,
+                conflictos o sentirse aislado pueden afectar el bienestar.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">😔</div>
+
+            <h3>Soledad</h3>
+
+            <p>
+                Sentirse solo o no tener una red de apoyo puede hacer
+                más difícil enfrentar situaciones complicadas.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">😰</div>
+
+            <h3>Estrés</h3>
+
+            <p>
+                El estrés constante puede afectar la manera en que
+                pensamos, sentimos y enfrentamos los problemas.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">👥</div>
+
+            <h3>Presión social</h3>
+
+            <p>
+                La influencia de otras personas puede llevar a tomar
+                decisiones que no siempre son beneficiosas.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">💭</div>
+
+            <h3>Dificultad emocional</h3>
+
+            <p>
+                No saber cómo expresar o manejar las emociones puede
+                dificultar la búsqueda de soluciones saludables.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     IMAGEN
+========================= -->
+
+<section class="imagen-seccion">
+
+    <img
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80"
+        alt="Amigos apoyándose"
+    >
+
+
+    <div class="texto-imagen">
+
+        <h2>🤝 El apoyo puede marcar la diferencia</h2>
+
+        <p>
+            Hablar con alguien de confianza puede ayudar a una persona
+            a sentirse acompañada y encontrar alternativas para enfrentar
+            sus problemas.
+        </p>
+
+        <p>
+            Familiares, amistades, docentes, orientadores y profesionales
+            pueden formar parte de una red de apoyo.
+        </p>
+
+        <p>
+            <strong>
+                Pedir ayuda no es una señal de debilidad.
+                Es una forma de cuidar nuestro bienestar.
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESO
+========================= -->
+
+<section class="proceso">
+
+    <h2>
+        🔄 Un problema puede abordarse de forma saludable
+    </h2>
+
+
+    <div class="pasos">
+
+
+        <div class="paso">
+
+            <div class="numero">1</div>
+
+            <h3>Reconocer</h3>
+
+            <p>
+                Identificar que existe un problema o una emoción difícil.
+            </p>
+
+        </div>
+
+
+        <div class="paso">
+
+            <div class="numero">2</div>
+
+            <h3>Hablar</h3>
+
+            <p>
+                Compartir lo que sentimos con una persona de confianza.
+            </p>
+
+        </div>
+
+
+        <div class="paso">
+
+            <div class="numero">3</div>
+
+            <h3>Buscar apoyo</h3>
+
+            <p>
+                Acudir a familiares, orientadores o profesionales.
+            </p>
+
+        </div>
+
+
+        <div class="paso">
+
+            <div class="numero">4</div>
+
+            <h3>Actuar</h3>
+
+            <p>
+                Desarrollar hábitos y estrategias saludables.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SEÑALES DE ALERTA
+========================= -->
+
+<section class="alerta" id="senales">
+
+    <h2>⚠️ Señales que pueden indicar que alguien necesita apoyo</h2>
+
+    <p>
+        Una sola señal no significa necesariamente que exista una adicción.
+        Sin embargo, varios cambios importantes pueden indicar que conviene
+        acercarse a la persona y ofrecer apoyo.
+    </p>
+
+
+    <ul>
+
+        <li>🔸 Cambios importantes en su comportamiento.</li>
+
+        <li>🔸 Aislamiento de familiares o amistades.</li>
+
+        <li>🔸 Problemas frecuentes en la escuela o actividades.</li>
+
+        <li>🔸 Cambios repentinos en sus hábitos.</li>
+
+        <li>🔸 Pérdida de interés en actividades que antes disfrutaba.</li>
+
+        <li>🔸 Dificultad para controlar determinadas conductas.</li>
+
+        <li>🔸 Conflictos frecuentes con otras personas.</li>
+
+    </ul>
+
+</section>
+
+
+<!-- =========================
+     PREVENCIÓN
+========================= -->
+
+<section class="prevencion" id="prevencion">
+
+    <h2 class="titulo">
+        🛡️ ¿Cómo podemos prevenir las adicciones?
+    </h2>
+
+    <p class="subtitulo">
+        Existen muchas maneras saludables de cuidar nuestro bienestar.
+    </p>
+
+
+    <div class="tarjetas">
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🏃</div>
+
+            <h3>Actividad física</h3>
+
+            <p>
+                Practicar algún deporte o realizar actividad física
+                puede ser una forma positiva de liberar tensión.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🎨</div>
+
+            <h3>Hobbies</h3>
+
+            <p>
+                La música, el arte, la lectura y otras actividades
+                pueden ayudar a desarrollar intereses saludables.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🗣️</div>
+
+            <h3>Comunicación</h3>
+
+            <p>
+                Hablar sobre nuestros problemas permite buscar
+                soluciones y recibir apoyo.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">👨‍👩‍👧</div>
+
+            <h3>Familia</h3>
+
+            <p>
+                Mantener vínculos positivos puede proporcionar
+                acompañamiento y confianza.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🎯</div>
+
+            <h3>Metas</h3>
+
+            <p>
+                Tener objetivos personales y escolares puede
+                ayudar a mantener la motivación.
+            </p>
+
+        </div>
+
+
+        <div class="tarjeta">
+
+            <div class="icono">🧑‍⚕️</div>
+
+            <h3>Ayuda profesional</h3>
+
+            <p>
+                Un profesional capacitado puede orientar a la persona
+                y a su familia cuando existe una dificultad.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section class="videos" id="videos">
+
+    <h2 class="titulo">
+        🎬 VIDEOS EDUCATIVOS
+    </h2>
+
+    <p class="subtitulo">
+        Puedes agregar aquí videos educativos sobre prevención,
+        salud emocional y toma de decisiones.
+    </p>
+
+
+    <div class="video-contenedor">
+
+
+        <div class="video">
+
+            <h3>🧠 Salud emocional</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/MIrD1VJd5J8"
+                title="Video educativo"
+                allowfullscreen>
+            </iframe>
+
+            <p>
+                Video relacionado con el cuidado de las emociones
+                y el bienestar personal.
+            </p>
+
+        </div>
+
+
+        <div class="video">
+
+            <h3>🛡️ Prevención</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/7M9L0ZJ0m0A"
+                title="Video educativo"
+                allowfullscreen>
+            </iframe>
+
+            <p>
+                Material audiovisual para complementar la información
+                sobre prevención.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENSAJE FINAL
+========================= -->
+
+<section class="mensaje">
+
+    <h2>💙 Tú no tienes que enfrentar todo solo</h2>
+
+    <p>
+        Tener problemas forma parte de la vida, pero buscar apoyo puede
+        ayudarnos a encontrar mejores caminos. Si tú o alguien que conoces
+        está pasando por una situación relacionada con una adicción,
+        es importante hablar con un adulto de confianza o con un profesional
+        de la salud.
+    </p>
+
+    <br>
+
+    <a href="#informacion" class="boton">
+        ↑ VOLVER AL INICIO
+    </a>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
+
+    <h2>DANIEL VEGA😲MIRANDA RAPIO</h2>
+
+    <p>
+        3-A
+    </p>
+
+    <p>
+        💜 •Linea de la vida CETis 87💙
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
